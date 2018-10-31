@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  number: 1
+  score: 1
+  deadline: 2018-10-31
+  subject: one
+  question: one
+  student: one
+
+two:
+  name: MyString
+  number: 1
+  score: 1
+  deadline: 2018-10-31
+  subject: two
+  question: two
+  student: two
