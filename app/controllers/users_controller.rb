@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  # Helper to authenticate
+  before_action :authenticate_user!
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
