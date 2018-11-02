@@ -18,8 +18,12 @@ ActiveRecord::Schema.define(version: 2018_11_01_193853) do
   create_table "administrators", force: :cascade do |t|
     t.string "cellphone"
     t.bigint "user_id"
+    t.bigint "location_id"
+    t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_administrators_on_city_id"
+    t.index ["location_id"], name: "index_administrators_on_location_id"
     t.index ["user_id"], name: "index_administrators_on_user_id"
   end
 
@@ -81,8 +85,6 @@ ActiveRecord::Schema.define(version: 2018_11_01_193853) do
     t.string "address"
     t.string "phone"
     t.integer "rol"
-    t.bigint "location_id"
-    t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -90,9 +92,7 @@ ActiveRecord::Schema.define(version: 2018_11_01_193853) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["location_id"], name: "index_users_on_location_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -111,13 +111,13 @@ ActiveRecord::Schema.define(version: 2018_11_01_193853) do
     t.index ["subject_id"], name: "index_workshops_on_subject_id"
   end
 
+  add_foreign_key "administrators", "cities"
+  add_foreign_key "administrators", "locations"
   add_foreign_key "administrators", "users"
   add_foreign_key "locations", "cities"
   add_foreign_key "students", "administrators"
   add_foreign_key "students", "users"
   add_foreign_key "subjects", "grades"
-  add_foreign_key "users", "cities"
-  add_foreign_key "users", "locations"
   add_foreign_key "workshops", "questions"
   add_foreign_key "workshops", "students"
   add_foreign_key "workshops", "subjects"

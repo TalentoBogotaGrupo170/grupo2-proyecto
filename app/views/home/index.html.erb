@@ -1,2 +1,15 @@
 <h1>Bienvenido a la plataforma educativa VirtualClass</h1>
 <p>Aqui encuertre sus talleres de aprendizaje y nivelacion.</p>
+
+<% if user_signed_in? %>
+<%= current_user.email %>
+<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<h1>Logueado</h1>
+<% else %>
+<%= link_to "Sign in", new_user_session_path %>
+<h1>No logueado</h1>
+<% end %>
+
+<!-- view layout application 
+all paths in incorrect url.
+-->
