@@ -14,12 +14,6 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New User"
 
-    fill_in "Address", with: @user.address
-    fill_in "City", with: @user.city_id
-    fill_in "Location", with: @user.location_id
-    fill_in "Name", with: @user.name
-    fill_in "Number", with: @user.number
-    fill_in "Phone", with: @user.phone
     fill_in "Rol", with: @user.rol
     fill_in "Username", with: @user.username
     click_on "Create User"
@@ -32,12 +26,6 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "Edit", match: :first
 
-    fill_in "Address", with: @user.address
-    fill_in "City", with: @user.city_id
-    fill_in "Location", with: @user.location_id
-    fill_in "Name", with: @user.name
-    fill_in "Number", with: @user.number
-    fill_in "Phone", with: @user.phone
     fill_in "Rol", with: @user.rol
     fill_in "Username", with: @user.username
     click_on "Update User"

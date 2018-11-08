@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  # Helper to authenticate
-  before_action :authenticate_user!
-
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -31,10 +28,6 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-
-        # Sends email to user when user is created.
-      AppMailer.welcome_email(@user).deliver
-
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -76,6 +69,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :name, :number, :address, :phone, :rol, :location_id, :city_id)
+      params.require(:user).permit(:username, :rol)
     end
 end

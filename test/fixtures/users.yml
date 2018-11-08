@@ -2,20 +2,8 @@
 
 one:
   username: MyString
-  name: MyString
-  number: 1
-  address: MyString
-  phone: MyString
   rol: 1
-  location: one
-  city: one
 
 two:
   username: MyString
-  name: MyString
-  number: 1
-  address: MyString
-  phone: MyString
   rol: 1
-  location: two
-  city: two
