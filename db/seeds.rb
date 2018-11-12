@@ -6,8 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-City.create(codigo: 1, name: 'Bogota')
-City.create(codigo: 2, name: 'Luke' )
-
-Location.create(codigo: 1, name: 'Suba')
-Location.create(codigo: 2, name: 'Chapinero')
+cities = City.create([{ codigo: 1, name: 'Bogota' }, { codigo: 2, name: 'Cali' }])
+Location.create(codigo: 2, name: 'Suba', city: City.find(1) )
