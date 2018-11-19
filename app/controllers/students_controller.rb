@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
 
   # GET /students
   # GET /students.json

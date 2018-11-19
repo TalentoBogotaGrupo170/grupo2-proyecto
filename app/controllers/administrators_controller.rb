@@ -1,6 +1,6 @@
 class AdministratorsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_administrator, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
 
   # GET /administrators
   # GET /administrators.json

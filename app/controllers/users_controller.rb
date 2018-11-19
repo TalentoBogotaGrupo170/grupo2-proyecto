@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
   
   # GET /users
   # GET /users.json
@@ -25,6 +26,12 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+
+    if user_signed_in?
+      @user.rol = 2
+    else
+      @user.rol = 1
+    end
 
     respond_to do |format|
       if @user.save

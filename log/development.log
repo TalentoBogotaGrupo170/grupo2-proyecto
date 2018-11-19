@@ -1426,3 +1426,1396 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 440ms (Views: 438.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-12 19:47:05 -0500
+  [1m[35m (213.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (133.5ms)
+Completed 200 OK in 3656ms (Views: 3588.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-12 19:47:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (686.1ms)
+Completed 200 OK in 1568ms (Views: 1051.4ms | ActiveRecord: 458.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-12 19:47:22 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 440ms (Views: 438.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-12 19:47:40 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQQQESV0OXy6oNi86NF0n0bbOKB62FAwCPbNgm5iwJBq0B+WI3UA4WzKpDyAlHWBRVsYOvEBOyCRBgXmVbMsSw==", "user"=>{"email"=>"ricardovg050@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (129.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ricardovg050@hotmail.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 1403ms (Views: 350.5ms | ActiveRecord: 130.0ms)
+
+
+  [1m[36mUser Load (37.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (256.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users" for 127.0.0.1 at 2018-11-12 19:52:43 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 307ms (Views: 257.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-12 19:52:51 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 369ms (Views: 366.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-12 19:53:12 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7EmeU9zttOp0j0i+kNf/29B8UkcAhF2ICnzCG6xL8zfwvuiqKz/GJo7Ex+7evLANP5BJVdkfDPdiQURSPv4SHg==", "user"=>{"email"=>"ricardovg@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ricardovg@outlook.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (41.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-11-13 00:53:13.288112"], ["updated_at", "2018-11-13 00:53:13.288112"], ["email", "ricardovg@outlook.com"], ["encrypted_password", "$2a$11$3dljrbTlzOBgMhAh9DgUguQcItNjTz6992dA37C9REgwcmKf3Xaum"]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 532ms (ActiveRecord: 85.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-12 19:53:13 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 303ms (Views: 272.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-12 19:56:12 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0Th1QZvEfoROMK9Gj655a+HVMqxDsQVxzHWd7FwUglbNzwO4bBYMSLR7IBbBxTa9DjkpvpoqVA6kSBulzqFjfw=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 151ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-12 19:56:12 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 497ms (Views: 448.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-12 20:01:39 -0500
+  [1m[35m (102.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (928.9ms)
+Completed 200 OK in 2643ms (Views: 2488.7ms | ActiveRecord: 102.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-12 20:01:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 332ms (Views: 330.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-12 20:01:55 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DNhr3dfpoLyOgpywUeYJld6yaZPOMRiM+eQXiteSKXolA3eyWJOChwIVCU5SEbzP9dypqAKBcv/NdS3Hon1e5g==", "user"=>{"email"=>"ricardovg050@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ricardovg050@hotmail.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 72ms (ActiveRecord: 2.8ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DNhr3dfpoLyOgpywUeYJld6yaZPOMRiM+eQXiteSKXolA3eyWJOChwIVCU5SEbzP9dypqAKBcv/NdS3Hon1e5g==", "user"=>{"email"=>"ricardovg050@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 940ms (Views: 550.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-12 20:02:00 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 428ms (Views: 426.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-12 20:02:11 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HeBbjOM6aMgrJyN1My2DnQwumOYjRps4lrebg7L1/r8WmrylCPWA9KT89GkG5Bp7wVTamoG1aLOFG2v0uYyicw==", "user"=>{"email"=>"ricardovg050@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ricardovg050@hotmail.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (41.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-11-13 01:02:12.227783"], ["updated_at", "2018-11-13 01:02:12.227783"], ["email", "ricardovg050@hotmail.com"], ["encrypted_password", "$2a$11$VIe7oNr0qOeFqtZRV.gSnuHyPF5yp9TxKrP/62l2vID9GV8eppso."]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (42.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 663ms (ActiveRecord: 88.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-12 20:02:12 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 308ms (Views: 282.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-12 20:06:52 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (285.8ms)
+Completed 200 OK in 2384ms (Views: 1660.4ms | ActiveRecord: 679.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:08:03 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (142.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (151.2ms)
+Completed 200 OK in 454ms (Views: 263.9ms | ActiveRecord: 142.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-12 20:08:06 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (23.0ms)
+  Rendered users/new.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 365ms (Views: 330.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-12 20:08:17 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pfnhm3f/b5QXrfEfdDXIWCeAdc3yDh0lkhKw2N7tO8uugwaynDCHqJh2JgNB/FG+6vo3sVD97q6BvkCv1ZRnBw==", "user"=>{"username"=>"ricardovg", "rol"=>"1"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-12 20:08:17 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 302ms (Views: 252.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:11:52 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 305ms (Views: 270.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:22:44 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (95.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (865.4ms)
+Completed 200 OK in 1646ms (Views: 584.9ms | ActiveRecord: 832.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-11-12 20:23:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 363ms (Views: 251.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:23:06 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 275ms (Views: 247.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/5" for 127.0.0.1 at 2018-11-12 20:23:28 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pHpWfYSYs0rrGgIPHNBAk1xgPP2xQ8YVnK2WUeDX5zKzmd0geuhUvnVCU2a2dO5u/VRtY5KUf1jGViQ/4zBZ8A==", "id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:61
+  [1m[36mUser Destroy (220.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/users_controller.rb:61
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:61
+Redirected to http://localhost:3000/users
+Completed 302 Found in 240ms (ActiveRecord: 223.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:23:28 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 306ms (Views: 280.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/4" for 127.0.0.1 at 2018-11-12 20:23:35 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kxpPV/8YGgmYOdIIvt/8WJLdvL3I2I4SUQxtyw0RNCqE+cQKAWj9/QZhg2EUe1KlM+ntI+sPN18L99+lDvaK6A==", "id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:61
+  [1m[36mUser Destroy (36.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:61
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:61
+Redirected to http://localhost:3000/users
+Completed 302 Found in 51ms (ActiveRecord: 38.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:23:35 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 275ms (Views: 248.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 20:23:39 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 296ms (Views: 267.8ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (187.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (236.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1458.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "development"[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (639.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "test"[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (14679.9ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'utf8'[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (8008.0ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'utf8'[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (251.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (105.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateUsers (20181008160549)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (132.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "rol" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181008160549_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (18.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181008160549"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateCities (20181031222424)
+  [1m[35m (99.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "codigo" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181031222424_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031222424"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateLocations (20181031223601)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (123.7ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "codigo" integer, "name" character varying, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_6c1a48c78d"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+)[0m
+  ↳ db/migrate/20181031223601_create_locations.rb:3
+  [1m[35m (39.7ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_city_id" ON "locations"  ("city_id")[0m
+  ↳ db/migrate/20181031223601_create_locations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031223601"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateGrades (20181031224549)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (117.9ms)[0m  [1m[35mCREATE TABLE "grades" ("id" bigserial primary key, "name" character varying, "level" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181031224549_create_grades.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224549"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateAdministrators (20181031224621)
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (142.1ms)[0m  [1m[35mCREATE TABLE "administrators" ("id" bigserial primary key, "cellphone" character varying, "user_id" bigint, "location_id" bigint, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2733f5ea0b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_5a4c5cd170"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+, CONSTRAINT "fk_rails_c2938579dd"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+)[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE  INDEX  "index_administrators_on_user_id" ON "administrators"  ("user_id")[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[35m (52.9ms)[0m  [1m[35mCREATE  INDEX  "index_administrators_on_location_id" ON "administrators"  ("location_id")[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[35m (46.1ms)[0m  [1m[35mCREATE  INDEX  "index_administrators_on_city_id" ON "administrators"  ("city_id")[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224621"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateStudents (20181031224653)
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (112.7ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "school" character varying, "administrator_id" bigint, "user_id" bigint, "grade_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f2e72190bd"
+FOREIGN KEY ("administrator_id")
+  REFERENCES "administrators" ("id")
+, CONSTRAINT "fk_rails_148c9e88f4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[35m (40.1ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_administrator_id" ON "students"  ("administrator_id")[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[35m (26.1ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_user_id" ON "students"  ("user_id")[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[35m (30.6ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_grade_id" ON "students"  ("grade_id")[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224653"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateSubjects (20181031224902)
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (100.1ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" bigserial primary key, "name" character varying, "grade_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_33d539df11"
+FOREIGN KEY ("grade_id")
+  REFERENCES "grades" ("id")
+)[0m
+  ↳ db/migrate/20181031224902_create_subjects.rb:3
+  [1m[35m (43.9ms)[0m  [1m[35mCREATE  INDEX  "index_subjects_on_grade_id" ON "subjects"  ("grade_id")[0m
+  ↳ db/migrate/20181031224902_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224902"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateQuestions (20181031224933)
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (93.8ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "description" character varying, "question" character varying, "answer" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181031224933_create_questions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224933"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateWorkshops (20181031224952)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (75.9ms)[0m  [1m[35mCREATE TABLE "workshops" ("id" bigserial primary key, "name" character varying, "number" integer, "score" integer, "deadline" date, "subject_id" bigint, "question_id" bigint, "student_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_004edc561b"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+, CONSTRAINT "fk_rails_4aed7ea112"
+FOREIGN KEY ("question_id")
+  REFERENCES "questions" ("id")
+, CONSTRAINT "fk_rails_5546b996f8"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+)[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[35m (39.0ms)[0m  [1m[35mCREATE  INDEX  "index_workshops_on_subject_id" ON "workshops"  ("subject_id")[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[35m (38.7ms)[0m  [1m[35mCREATE  INDEX  "index_workshops_on_question_id" ON "workshops"  ("question_id")[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[35m (38.6ms)[0m  [1m[35mCREATE  INDEX  "index_workshops_on_student_id" ON "workshops"  ("student_id")[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224952"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to AddDeviseToUsers (20181108160723)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (189.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:7
+  [1m[35m (320.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:15
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:40
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181108160723"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (113.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-13 01:34:50.758417"], ["updated_at", "2018-11-13 01:34:50.758417"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCity Create (2.4ms)[0m  [1m[32mINSERT INTO "cities" ("codigo", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["codigo", 1], ["name", "Bogota"], ["created_at", "2018-11-13 01:34:51.194861"], ["updated_at", "2018-11-13 01:34:51.194861"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("codigo", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["codigo", 2], ["name", "Cali"], ["created_at", "2018-11-13 01:34:51.202302"], ["updated_at", "2018-11-13 01:34:51.202302"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mLocation Create (3.5ms)[0m  [1m[32mINSERT INTO "locations" ("codigo", "name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["codigo", 2], ["name", "Suba"], ["city_id", 1], ["created_at", "2018-11-13 01:34:51.539187"], ["updated_at", "2018-11-13 01:34:51.539187"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (126.4ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'utf8'[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'utf8'[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (266.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (113.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateUsers (20181008160549)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (774.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "rol" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181008160549_create_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (52.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (113.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (2712.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "development"[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (876.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "test"[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (19252.0ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'utf8'[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (20172.8ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'utf8'[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (198.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (113.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateUsers (20181008160549)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (107.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "rol" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181008160549_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (75.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181008160549"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateCities (20181031222424)
+  [1m[35m (8.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (189.7ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "codigo" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181031222424_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031222424"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateLocations (20181031223601)
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (170.7ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "codigo" integer, "name" character varying, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_6c1a48c78d"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+)[0m
+  ↳ db/migrate/20181031223601_create_locations.rb:3
+  [1m[35m (38.7ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_city_id" ON "locations"  ("city_id")[0m
+  ↳ db/migrate/20181031223601_create_locations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031223601"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateGrades (20181031224549)
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (129.6ms)[0m  [1m[35mCREATE TABLE "grades" ("id" bigserial primary key, "name" character varying, "level" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181031224549_create_grades.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224549"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateAdministrators (20181031224621)
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (219.4ms)[0m  [1m[35mCREATE TABLE "administrators" ("id" bigserial primary key, "cellphone" character varying, "user_id" bigint, "location_id" bigint, "city_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2733f5ea0b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_5a4c5cd170"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+, CONSTRAINT "fk_rails_c2938579dd"
+FOREIGN KEY ("city_id")
+  REFERENCES "cities" ("id")
+)[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[35m (106.5ms)[0m  [1m[35mCREATE  INDEX  "index_administrators_on_user_id" ON "administrators"  ("user_id")[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[35m (116.4ms)[0m  [1m[35mCREATE  INDEX  "index_administrators_on_location_id" ON "administrators"  ("location_id")[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[35m (109.9ms)[0m  [1m[35mCREATE  INDEX  "index_administrators_on_city_id" ON "administrators"  ("city_id")[0m
+  ↳ db/migrate/20181031224621_create_administrators.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224621"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateStudents (20181031224653)
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (259.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "school" character varying, "administrator_id" bigint, "user_id" bigint, "grade_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f2e72190bd"
+FOREIGN KEY ("administrator_id")
+  REFERENCES "administrators" ("id")
+, CONSTRAINT "fk_rails_148c9e88f4"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[35m (101.0ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_administrator_id" ON "students"  ("administrator_id")[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[35m (287.9ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_user_id" ON "students"  ("user_id")[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[35m (65.2ms)[0m  [1m[35mCREATE  INDEX  "index_students_on_grade_id" ON "students"  ("grade_id")[0m
+  ↳ db/migrate/20181031224653_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224653"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateSubjects (20181031224902)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (428.5ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" bigserial primary key, "name" character varying, "grade_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_33d539df11"
+FOREIGN KEY ("grade_id")
+  REFERENCES "grades" ("id")
+)[0m
+  ↳ db/migrate/20181031224902_create_subjects.rb:3
+  [1m[35m (124.9ms)[0m  [1m[35mCREATE  INDEX  "index_subjects_on_grade_id" ON "subjects"  ("grade_id")[0m
+  ↳ db/migrate/20181031224902_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224902"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateQuestions (20181031224933)
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (333.1ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "description" character varying, "question" character varying, "answer" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181031224933_create_questions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224933"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to CreateWorkshops (20181031224952)
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (305.1ms)[0m  [1m[35mCREATE TABLE "workshops" ("id" bigserial primary key, "name" character varying, "number" integer, "score" integer, "deadline" date, "subject_id" bigint, "question_id" bigint, "student_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_004edc561b"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+, CONSTRAINT "fk_rails_4aed7ea112"
+FOREIGN KEY ("question_id")
+  REFERENCES "questions" ("id")
+, CONSTRAINT "fk_rails_5546b996f8"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+)[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE  INDEX  "index_workshops_on_subject_id" ON "workshops"  ("subject_id")[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[35m (116.7ms)[0m  [1m[35mCREATE  INDEX  "index_workshops_on_question_id" ON "workshops"  ("question_id")[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[35m (149.5ms)[0m  [1m[35mCREATE  INDEX  "index_workshops_on_student_id" ON "workshops"  ("student_id")[0m
+  ↳ db/migrate/20181031224952_create_workshops.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181031224952"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+Migrating to AddDeviseToUsers (20181108160723)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (442.1ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:7
+  [1m[35m (363.7ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:15
+  [1m[35m (81.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:40
+  [1m[35m (73.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20181108160723_add_devise_to_users.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181108160723"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (29.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-16 19:47:38.296495"], ["updated_at", "2018-11-16 19:47:38.296495"]]
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCity Create (1.8ms)[0m  [1m[32mINSERT INTO "cities" ("codigo", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["codigo", 1], ["name", "Bogota"], ["created_at", "2018-11-16 19:47:38.721090"], ["updated_at", "2018-11-16 19:47:38.721090"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("codigo", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["codigo", 2], ["name", "Cali"], ["created_at", "2018-11-16 19:47:38.728165"], ["updated_at", "2018-11-16 19:47:38.728165"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mLocation Create (39.9ms)[0m  [1m[32mINSERT INTO "locations" ("codigo", "name", "city_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["codigo", 2], ["name", "Suba"], ["city_id", 1], ["created_at", "2018-11-16 19:47:38.942704"], ["updated_at", "2018-11-16 19:47:38.942704"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+Started GET "/" for 127.0.0.1 at 2018-11-16 14:51:37 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 5686ms (Views: 5626.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 14:51:53 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 340ms (Views: 293.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 14:56:17 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 275ms (Views: 245.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:06:13 -0500
+  [1m[35m (63.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 19675ms (Views: 19617.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-16 15:06:43 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (650.2ms)
+Completed 200 OK in 1435ms (Views: 1148.9ms | ActiveRecord: 245.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-16 15:06:48 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (129.6ms)
+Completed 200 OK in 576ms (Views: 549.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:06:50 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 318ms (Views: 293.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:09:10 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2907ms (Views: 2880.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:18:27 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 533ms (Views: 506.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 15:18:37 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (53.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (461.0ms)
+Completed 200 OK in 1087ms (Views: 399.3ms | ActiveRecord: 450.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-16 15:18:45 -0500
+Processing by UsersController#new as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-16 15:18:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 785ms (Views: 511.6ms | ActiveRecord: 252.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:18:49 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 405ms (Views: 378.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:19:49 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 434ms (Views: 406.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-16 15:19:59 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 497ms (Views: 494.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 15:21:14 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 396ms (Views: 362.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:21:56 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 399ms (Views: 370.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-16 15:21:58 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 480ms (Views: 478.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-16 15:22:11 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7oVFXGza/OSA5kMo9c2+oZpCQvoTD4edo1xvSuDuKPzR17LeQWoVvggDcjEOKVmfUHv4pVYvY6RY7Ur4CfZP7w==", "user"=>{"email"=>"ricardovg@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ricardovg@outlook.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 100ms (ActiveRecord: 9.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7oVFXGza/OSA5kMo9c2+oZpCQvoTD4edo1xvSuDuKPzR17LeQWoVvggDcjEOKVmfUHv4pVYvY6RY7Ur4CfZP7w==", "user"=>{"email"=>"ricardovg@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 838ms (Views: 486.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-16 15:22:15 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 482ms (Views: 479.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 15:22:30 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rbsrxozoVCUTpeJIm9vtEIknipLgL39S5QCH1Fjh+88vP3wZBDcXOUYJcTe8n13/zFiXMK2XKavNRv9Q8liqLA==", "user"=>{"email"=>"ricardovg@outlook.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ricardovg@outlook.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (161.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-11-16 20:22:30.524606"], ["updated_at", "2018-11-16 20:22:30.524606"], ["email", "ricardovg@outlook.com"], ["encrypted_password", "$2a$11$cTIs82iJGRsjQlAflwWowuKXBRPUatNoZzm3fwHSRfbEY4Td6UNFe"]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (76.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 845ms (ActiveRecord: 239.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-11-16 15:22:31 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.5ms)
+  Rendered users/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 502ms (Views: 438.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2018-11-16 15:22:42 -0500
+Processing by StudentsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (14.0ms)
+  Rendered students/new.html.erb within layouts/application (198.9ms)
+Completed 200 OK in 750ms (Views: 612.8ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-16 15:22:59 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (52.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:17
+  Rendered students/index.html.erb within layouts/application (58.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 544ms (Views: 401.2ms | ActiveRecord: 53.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-16 15:23:21 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:17
+  Rendered students/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 459ms (Views: 428.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2018-11-16 15:23:29 -0500
+Processing by StudentsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (5.8ms)
+  Rendered students/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 482ms (Views: 452.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-16 15:23:32 -0500
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:17
+  Rendered students/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 430ms (Views: 400.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:23:35 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 411ms (Views: 379.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:25:59 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 445ms (Views: 416.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:43:41 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (758.3ms)
+Completed 200 OK in 1180ms (Views: 429.7ms | ActiveRecord: 720.6ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (99.2ms)[0m  [1m[33mUPDATE "users" SET "rol" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["rol", 1], ["updated_at", "2018-11-16 20:55:43.081648"], ["id", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:56:55 -0500
+  [1m[35m (107.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (105.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (242.6ms)
+Completed 200 OK in 4725ms (Views: 4492.8ms | ActiveRecord: 195.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-16 15:57:18 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/7rW/6cYF4sIKemKyqv/Ly5bArnW25ZW7Jvs8CPYUCRCKyKSnij8xDLMJ4nomptqJ2BHcKofCeS9xGvzoszG+g=="}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:57:19 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 435ms (Views: 405.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-16 15:57:23 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (363.7ms)
+Completed 200 OK in 935ms (Views: 933.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 15:57:35 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ru3Jp4E/AJDpmfv3iteJyS6dEc6GxPORxDn44S3vlg5a7wmzNTpqiQrs9q1BHKzkC6WTc5i+Wt9iLju6iDFUyQ==", "user"=>{"email"=>"ricardovg050@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (40.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ricardovg050@hotmail.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (19.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-11-16 20:57:36.445367"], ["updated_at", "2018-11-16 20:57:36.445367"], ["email", "ricardovg050@hotmail.com"], ["encrypted_password", "$2a$11$mtyQeHGDWrRchaLFEVPRxeZDTcHd0AiGNTyNcqjh7eL05xsd0NYXK"]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 823ms (ActiveRecord: 95.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:57:36 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 420ms (Views: 385.9ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:06:01 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 1193ms (Views: 1138.5ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-16 16:06:12 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:06:12 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 429ms (Views: 391.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-16 16:06:16 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IW9ANdGCzH/b5b0qCQ97YDiZUt1utbGCl1t15Bhk1ncZKToSNVxH+k5helV0F3zw5TRG+sEvO+qnmTYbFz3yUw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:06:16 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 418ms (Views: 388.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-16 16:06:19 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 557ms (Views: 554.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 16:06:44 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Tloe5SIp9fGiQOSrsEf9QyAASEzir+LPFq1bAlJ68Qami8xxxYgFCzMAF0R1H4wfF6Abxddm0xz/qkWZAEOQg==", "user"=>{"email"=>"ricardovg100@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (46.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ricardovg100@hotmail.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (53.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2018-11-16 21:06:44.745993"], ["updated_at", "2018-11-16 21:06:44.745993"], ["email", "ricardovg100@hotmail.com"], ["encrypted_password", "$2a$11$ymyztydQdPrAsL2kjhKQtO8Mppz1C7OSGCtMe7Xio7KUGu7j5mmpi"]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 571ms (ActiveRecord: 102.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:06:45 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 444ms (Views: 416.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 16:06:59 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 552ms (Views: 422.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-11-16 16:07:07 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:78
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.4ms)
+  Rendered users/edit.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 547ms (Views: 496.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-11-16 16:10:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/edit"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-11-16 16:11:04 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:78
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.0ms)
+  Rendered users/edit.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 731ms (Views: 531.3ms | ActiveRecord: 134.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-16 16:11:47 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IGzX3SF1NN8EHromTWD5JfKkwf0rgX+FtGxMrawilJJ8lB5Xiv4Eb1d3s6VVWLAHsztG9NqCxwsp4AFyFubhJA=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:11:47 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 527ms (Views: 494.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-16 16:11:51 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 661ms (Views: 658.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-11-16 16:11:58 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uz/i2bZ2INNwU9tshaGj8xT8e2pFi0ooFdsK/v0dhrZVHFYA+5zwcZx6ibU+IUcokWN0epk5Z5wvjN1vqW1DwA==", "user"=>{"email"=>"ricardovg@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ricardovg@outlook.com"], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 548ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:11:59 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:4
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 485ms (Views: 455.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 16:12:05 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 435ms (Views: 406.6ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-11-16 16:12:10 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xnHrSmzQwPjCOj88XzEEdRB2QzSWOwo0njX/onxNgv+vFHNkIUvxfC1P6ghNqJVacMNG7Gd524e+xTQkBb5PVA==", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:78
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mUser Destroy (233.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (31.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:68
+Redirected to http://localhost:3000/users
+Completed 302 Found in 284ms (ActiveRecord: 266.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 16:12:11 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 449ms (Views: 418.1ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2018-11-16 16:12:14 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZFoWxlAj9NG1aAKzeKNHGJPXubX0FxGbRWwFeU9G6b0NP47oHbjFVVod14dqOtY382K8bQVVwChlnM7/NrUkFg==", "id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:78
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:68
+Redirected to http://localhost:3000/users
+Completed 302 Found in 15ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 16:12:14 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 531ms (Views: 497.5ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-11-16 16:15:02 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0T/OaOPQZI1fpXR1iCfH/wFrqTNr3pkTD0n7lX7L2n64WlZGrktVCbDQoUGavlbQYd6s65qcSKAvuTATBzgX1Q=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Programs/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 16:15:02 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 416ms (Views: 389.8ms | ActiveRecord: 0.0ms)
+
+
